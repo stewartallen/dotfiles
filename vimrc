@@ -1,9 +1,6 @@
 set nocompatible "Not vi compativle (Vim is king)
 
-""""""""""""""""""""""""""""""""""
 " Vundle
-""""""""""""""""""""""""""""""""""
-"set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle required! 
@@ -18,16 +15,17 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'scrooloose/syntastic'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'vim-scripts/OmniCppComplete'
+Bundle 'godlygeek/tabular'
+Bundle 'majutsushi/tagbar'
 
 " Programming languages:
 Bundle 'derekwyatt/vim-scala'
 Bundle 'jtratner/vim-flavored-markdown'
+Bundle 'vim-ruby/vim-ruby'
 
 filetype plugin indent on   " required for vundle
 
-""""""""""""""""""""""""""""""""""
 " Syntax and indent
-""""""""""""""""""""""""""""""""""
 syntax enable " Turn on syntax highligthing
 colorscheme darkZ
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
@@ -46,12 +44,11 @@ filetype on
 set autoindent " Copy indent from the row above
 set si " Smart indent
 
-""""""""""""""""""""""""""""""""""
 " Some other confy settings
-""""""""""""""""""""""""""""""""""
 set nu " Number lines
 set hls " highlight search
 set lbr " linebreak
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
 " Use 2 space instead of tab during format
 set expandtab
@@ -72,11 +69,7 @@ let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$']
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-
 let g:ctrlp_working_path_mode = 'ra'
-
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " Powerline
@@ -100,3 +93,5 @@ let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert)
 let OmniCpp_NamespaceSearch = 2 " search namespaces in this and included files
 let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
 
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
