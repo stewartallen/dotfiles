@@ -17,6 +17,7 @@ Bundle 'flazz/vim-colorschemes'
 Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'godlygeek/tabular'
 Bundle 'majutsushi/tagbar'
+Bundle 'tpope/vim-fugitive'
 
 " Programming languages:
 Bundle 'derekwyatt/vim-scala'
