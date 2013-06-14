@@ -30,7 +30,12 @@ filetype plugin indent on   " required for vundle
 " Syntax and indent
 syntax enable " Turn on syntax highligthing
 colorscheme darkZ
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+
+if has("gui_macvim")
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
+else
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+endif
 
 if &diff
   " incase i want different things for vimdiff
