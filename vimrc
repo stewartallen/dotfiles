@@ -1,6 +1,7 @@
 set nocompatible "Not vi compativle (Vim is king)
 
 " Vundle
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle required! 
@@ -96,3 +97,7 @@ let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) 
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" fugitive
+autocmd User fugitive if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' | nnoremap <buffer> .. :edit %:h<CR> | endif
+autocmd BufReadPost fugitive://* set bufhidden=delete
