@@ -22,8 +22,8 @@ Bundle 'tpope/vim-fugitive'
 
 " Programming languages:
 Bundle 'derekwyatt/vim-scala'
-Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-markdown'
 
 filetype plugin indent on   " required for vundle
 
@@ -85,7 +85,7 @@ set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 " Markdown
 augroup markdown
   au!
-  au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+  au BufNewFile,BufRead *.md,*.markdown setlocal filetype=markdown
 augroup END
 
 " OmniCppComplete
