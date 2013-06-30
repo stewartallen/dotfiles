@@ -61,8 +61,8 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set expandtab
 set shiftwidth=2
 set softtabstop=2
-autocmd FileType java set shiftwidth=4
-autocmd FileType java set tabstop=4
+autocmd FileType java,c,cpp set shiftwidth=4
+autocmd FileType java,c,cpp set tabstop=4
 
 " For vim-sensible, keep all the undo files in the same place
 set undodir^=~/.vim/undo
