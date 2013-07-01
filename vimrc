@@ -19,11 +19,13 @@ Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'godlygeek/tabular'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdcommenter'
 
 " Programming languages:
 Bundle 'derekwyatt/vim-scala'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-markdown'
+Bundle 'elzr/vim-json'
 
 filetype plugin indent on   " required for vundle
 
@@ -106,3 +108,9 @@ nmap <F8> :TagbarToggle<CR>
 " fugitive
 autocmd User fugitive if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' | nnoremap <buffer> .. :edit %:h<CR> | endif
 autocmd BufReadPost fugitive://* set bufhidden=delete
+
+" vim-json
+autocmd FileType json setlocal conceallevel=0
+
+" nerdcommenter
+map <C-\> <leader>c<space>
