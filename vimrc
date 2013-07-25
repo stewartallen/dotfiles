@@ -90,6 +90,9 @@ augroup markdown
   au BufNewFile,BufRead *.md,*.markdown setlocal filetype=markdown
 augroup END
 
+"ctags
+set tags=./tags;/
+
 " OmniCppComplete
 imap <C-Space> <C-x><C-o>
 imap <C-@> <C-Space>
