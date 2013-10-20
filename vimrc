@@ -14,12 +14,12 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/powerline'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'scrooloose/syntastic'
-Bundle 'flazz/vim-colorschemes'
 Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'godlygeek/tabular'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'altercation/vim-colors-solarized'
 
 " Programming languages:
 Bundle 'derekwyatt/vim-scala'
@@ -31,7 +31,7 @@ filetype plugin indent on   " required for vundle
 
 " Syntax and indent
 syntax enable " Turn on syntax highligthing
-colorscheme darkZ
+colorscheme solarized
 
 if has("gui_macvim")
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
