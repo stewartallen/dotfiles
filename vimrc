@@ -26,15 +26,18 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-markdown'
 Bundle 'elzr/vim-json'
+Bundle 'klen/python-mode'
+Bundle 'othree/javascript-libraries-syntax.vim'
 
 filetype plugin indent on   " required for vundle
 
 " Syntax and indent
 syntax enable " Turn on syntax highligthing
 colorscheme solarized
+set background=dark
 
 if has("gui_macvim")
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
 else
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
 endif
