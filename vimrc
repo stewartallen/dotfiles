@@ -19,6 +19,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'samsonw/vim-task'
 Bundle 'altercation/vim-colors-solarized'
 
 " Programming languages:
