@@ -77,7 +77,7 @@ set undodir^=~/.vim/undo
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd vimenter * if !argc() | NERDTree | endif
-let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$']
+let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.o$', '\.d$']
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
