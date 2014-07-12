@@ -21,6 +21,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'samsonw/vim-task'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'rizzatti/dash.vim'
 
 " Programming languages:
 Bundle 'derekwyatt/vim-scala'
@@ -29,6 +30,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'elzr/vim-json'
 Bundle 'klen/python-mode'
 Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'stewartallen/c.vim'
 
 filetype plugin indent on   " required for vundle
 
@@ -121,3 +123,6 @@ autocmd FileType json setlocal conceallevel=0
 
 " nerdcommenter
 map <C-\> <leader>c<space>
+
+" C Support
+filetype plugin on
