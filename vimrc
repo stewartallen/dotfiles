@@ -14,7 +14,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/powerline'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'godlygeek/tabular'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
@@ -22,6 +21,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'samsonw/vim-task'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'rizzatti/dash.vim'
+Bundle 'Shougo/neocomplete.vim'
 
 " Programming languages:
 Bundle 'derekwyatt/vim-scala'
@@ -30,7 +30,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'elzr/vim-json'
 Bundle 'klen/python-mode'
 Bundle 'othree/javascript-libraries-syntax.vim'
-Bundle 'stewartallen/c.vim'
+Bundle 'fatih/vim-go'
 
 filetype plugin indent on   " required for vundle
 
@@ -40,7 +40,7 @@ colorscheme solarized
 set background=dark
 
 if has("gui_macvim")
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h14
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
 else
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
 endif
@@ -124,5 +124,5 @@ autocmd FileType json setlocal conceallevel=0
 " nerdcommenter
 map <C-\> <leader>c<space>
 
-" C Support
-filetype plugin on
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
