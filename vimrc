@@ -1,37 +1,42 @@
 set nocompatible "Not vi compativle (Vim is king)
 
 " Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+filetype off" 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle required! 
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Github repos
-Bundle 'tpope/vim-sensible'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/powerline'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'scrooloose/syntastic'
-Bundle 'godlygeek/tabular'
-Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'samsonw/vim-task'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'rizzatti/dash.vim'
-Bundle 'Shougo/neocomplete.vim'
+Plugin 'tpope/vim-sensible'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'tpope/vim-unimpaired'
+Plugin 'scrooloose/syntastic'
+Plugin 'godlygeek/tabular'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'samsonw/vim-task'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'rizzatti/dash.vim'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'jbgutierrez/vim-better-comments'
 
 " Programming languages:
-Bundle 'derekwyatt/vim-scala'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-markdown'
-Bundle 'elzr/vim-json'
-Bundle 'klen/python-mode'
-Bundle 'othree/javascript-libraries-syntax.vim'
-Bundle 'fatih/vim-go'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-markdown'
+Plugin 'elzr/vim-json'
+Plugin 'klen/python-mode'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'fatih/vim-go'
 
+" All of your Plugins must be added before the following line
+call vundle#end()
 filetype plugin indent on   " required for vundle
 
 " Syntax and indent
@@ -86,9 +91,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
-" Powerline
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 " Markdown
 augroup markdown
