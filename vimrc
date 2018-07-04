@@ -25,6 +25,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'rizzatti/dash.vim'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'jbgutierrez/vim-better-comments'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 
 " Programming languages:
 Plugin 'derekwyatt/vim-scala'
@@ -34,6 +36,7 @@ Plugin 'elzr/vim-json'
 Plugin 'klen/python-mode'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'fatih/vim-go'
+Plugin 'cespare/vim-toml'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -45,7 +48,7 @@ colorscheme solarized
 set background=dark
 
 if has("gui_macvim")
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+  set guifont=Menlo\ Regular\ for\ Powerline:h12
 else
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
 endif
