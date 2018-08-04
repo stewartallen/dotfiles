@@ -37,6 +37,7 @@ Plugin 'klen/python-mode'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'fatih/vim-go'
 Plugin 'cespare/vim-toml'
+Plugin 'rust-lang/rust.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
