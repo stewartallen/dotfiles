@@ -23,21 +23,22 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'samsonw/vim-task'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'rizzatti/dash.vim'
-Plugin 'Shougo/neocomplete.vim'
 Plugin 'jbgutierrez/vim-better-comments'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'lifepillar/vim-mucomplete'
 
 " Programming languages:
-Plugin 'derekwyatt/vim-scala'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-markdown'
 Plugin 'elzr/vim-json'
 Plugin 'klen/python-mode'
 Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'fatih/vim-go'
 Plugin 'cespare/vim-toml'
 Plugin 'rust-lang/rust.vim'
+Plugin 'dense-analysis/ale'
+Plugin 'vim-yaml-folds'
+Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -49,9 +50,7 @@ colorscheme solarized
 set background=dark
 
 if has("gui_macvim")
-  set guifont=Menlo\ Regular\ for\ Powerline:h12
-else
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+  set guifont=Jetbrains\ Mono:h12
 endif
 
 if &diff
@@ -102,27 +101,12 @@ augroup markdown
   au BufNewFile,BufRead *.md,*.markdown setlocal filetype=markdown
 augroup END
 
-"ctags
-set tags=./tags;/
-
-" OmniCppComplete
-imap <C-Space> <C-x><C-o>
-imap <C-@> <C-Space>
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-set completeopt=menu,menuone
-let OmniCpp_MayCompleteDot = 1 " autocomplete with .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete with ->
-let OmniCpp_MayCompleteScope = 1 " autocomplete with ::
-let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert)
-let OmniCpp_NamespaceSearch = 2 " search namespaces in this and included files
-let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
-
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
 
 " fugitive
-autocmd User fugitive if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' | nnoremap <buffer> .. :edit %:h<CR> | endif
-autocmd BufReadPost fugitive://* set bufhidden=delete
+" autocmd User fugitive if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' | nnoremap <buffer> .. :edit %:h<CR> | endif
+" autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " vim-json
 autocmd FileType json setlocal conceallevel=0
@@ -132,3 +116,19 @@ map <C-\> <leader>c<space>
 
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
+
+" YAML
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+let g:indentLine_char = '⦙'
+
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_lint_on_text_changed = 'never'
+
+" MUcomplete
+let g:mucomplete#enable_auto_at_startup = 1
+set completeopt+=menuone
+set completeopt+=noselect
+set shortmess+=c   " Shut off completion messages
+set belloff+=ctrlg " Add only if Vim beeps during completion
