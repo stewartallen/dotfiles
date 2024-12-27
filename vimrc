@@ -37,7 +37,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'rust-lang/rust.vim'
 Plugin 'dense-analysis/ale'
-Plugin 'vim-yaml-folds'
+Plugin 'pedrohdz/vim-yaml-folds'
 Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
